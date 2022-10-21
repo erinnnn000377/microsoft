@@ -1,0 +1,453 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+header #nav nav{
+    width: 100%;
+    height: 50px;
+    background-color: antiquewhite;
+}
+header #nav nav .container{
+    max-width: calc(100% - 100px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header #nav nav .container .list{
+    width: 50%;
+    display: flex;
+}
+header #nav nav .container .list .logo{
+    width: 137px;
+    height: 54px;
+    
+}
+header #nav nav .container .list .logo img{
+    width: 100%;
+    padding: 16px 6px 16px 10px;
+}
+header #nav nav .container .list .small-list ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+header #nav nav .container .list .small-list ul a{
+    color: #262626;
+    margin-left: 20px;
+    text-decoration: none;
+}
+header #nav nav .container .list .small-list ul a:hover{
+    text-decoration: underline;
+}
+header #nav nav .container .personal{
+    width: 250px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px;
+}
+header #nav nav .container .personal .microsoft-search{
+    display: flex;
+    position: relative; /*鋪墊hover的東西，要用position讓下面的 all-micro-src 空體積*/
+}
+
+/*--------------hover內容------------*/
+
+header #nav nav .container .personal .microsoft-search .all-microsoft-resource{
+    width: 1230px;
+    position: absolute;
+    background-color: #f2f2f2;
+    z-index: 1;
+    margin-top: 37px;
+    transform: translateX(-900px);
+    display: none; 
+    /*還沒hover上去時為隱形 後面再加display:block;  */
+}
+header #nav nav .container .personal .microsoft-search .all-microsoft:hover{
+    text-decoration: underline;
+}
+header #nav nav .container .personal .microsoft-search .all-microsoft-resource .all-re{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+header #nav nav .container .personal .microsoft-search .all-microsoft-resource .all-re .re{
+    display: flex;
+    width: 195px;
+    line-height: 35px;
+}
+header #nav nav .container .personal .microsoft-search .all-microsoft-resource .all-re .re li{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    font-size: 10px;
+}
+header #nav nav .container .personal .microsoft-search .all-microsoft-resource .all-re .re span{
+    font-weight: 600;
+}
+header #nav nav .container .personal .microsoft-search .all-microsoft-resource .all-micro-src-bottom{
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    padding: 10px;
+    border-bottom: 3px solid black;
+}
+header #nav nav .container .personal .microsoft-search .all-microsoft-resource .all-micro-src-bottom a{
+    color: black;
+    text-decoration: none;
+}
+header #nav nav .container .personal .microsoft-search .all-microsoft-resource .all-micro-src-bottom a:hover{
+    text-decoration: underline;
+}
+header #nav nav .container .personal .microsoft-search .all-microsoft:hover+.all-microsoft-resource{
+    display: block;
+}   /*加號為讓出來的東西，用相鄰的方式呈現出來*/
+
+/*------------------------------------------*/
+
+header #nav nav .container .personal .microsoft-search .all-microsoft{
+    margin-right: 10px;
+}
+header #nav nav .container .personal .search a{
+    color: black;
+    text-decoration: none;
+}
+header #nav nav .container .personal .search a:hover{
+    text-decoration: underline;
+}
+header #nav nav .container .personal .user-info{
+    display: flex;
+    align-items: baseline;
+}
+header #nav nav .container .personal .user-info .shop{
+    display: flex;
+}
+header #nav nav .container .personal .user-info .shop a{
+    text-decoration: none;
+    color: black;
+}
+header #nav nav .container .personal .user-info .shop a:hover{
+    text-decoration: underline;
+}
+header #nav nav .container .personal img{
+    width: 25px;
+    height: 25px;
+}
+/*--------------------main-----------------------*/
+main #banner{
+    position: relative;
+    width: 100%;
+    /*height: 600px;  (父層不要設高度，讓裡面的元素去定義他自己的高度，才不會讓下面的section衝突*/
+}
+main #banner .picture{
+    width: 100%;
+    height: 600px;
+}
+main #banner .product-title{
+    position: absolute;
+    top: 30%;
+    right: 12%;
+}
+main #banner .product-title h1{
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+main #banner .product-title .new{
+    width: 70px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 550;
+    background-color: #ffb900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main #banner .product-title .learn{
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 550;
+    background-color: #0067b8;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main #banner .slide{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main #banner .slide .control{
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+main #banner .slide .control .page{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+}
+main .change{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .change .change-type{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+main #now{
+    width: 100%;
+    /* background-color: grey; */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+main #now .new-prod{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+main #now .new-prod .new{
+    width: 380px;
+    margin-left: 5px;
+}
+main #now .new-prod .new .pic{
+    display: block;
+    width: 370px;
+    height: auto;
+}
+main #now .new-prod .pro-info .lately{
+    width: 50px;
+    height: 30px;
+    background-color: #ffb900;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+main #now .new-prod .pro-info .old{
+    opacity: 0; /*讓第三跟第四個新上市隱形*/
+}
+main #now .new-prod .pro-info .pro-name h2{
+    width: 250px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+main #now .new-prod .pro-info .pro-footer{
+    font-size: 20px;
+    color: #0067b8;
+    height: 30px;
+}
+main #highlight{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+main #highlight .picture{
+    width: 100%;
+    height: 600px;
+}
+main #highlight .highlight-title{
+    position: absolute;
+    top: 30%;
+    left: 12%;
+}
+main #highlight .highlight-title .hl-name h2{
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+main #highlight .highlight-title .hl-footer{
+    width: 100px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 550;
+    background-color:#0067b8;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main #business{
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+main #business .container{
+    width: 97%;
+    display: flex;
+}
+main #business .business-title h2{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.2;
+    /* background-color: #ffb900; */
+}
+main #business .four-card-box2{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+main #business .four-card-box2 .card{
+    width: 382px;
+    /* height: 400px; */
+    /* background-color: aqua; */
+}
+main #business .four-card-box2 .card .card-text{
+    width: 382px;
+    /* height: 200px; */
+    /* background-color: #262626; */
+}
+main #business .four-card-box2 .card .card-text .new{
+    width: 50px;
+    height: 30px;
+    background-color: #ffb900;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+main #business .four-card-box2 .card .card-text .old{
+    opacity: 0;
+}
+main #business .four-card-box2 .card .card-text .title h2{
+    width: 250px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+main #business .four-card-box2 .card .card-text{
+    width: auto;
+    height: 190px;
+    align-items: stretch;
+}
+main #business .four-card-box2 .card .card-text .learn{
+    font-size: 20px;
+    color: #0067b8;
+    height: 30px;
+}
+main #social-follow{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    /* background-color: aquamarine; */
+}
+main #social-follow .follow{
+    width: 86%;
+    display: flex;
+    align-items: center;
+}
+main #social-follow .follow h3{
+    font-size: 20px;
+    display: flex;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-right: 20px;
+    opacity: 0.7;
+}
+main #social-follow .follow .fb-yt img{
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+}
+main #back .bottom{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+footer #footernav{
+    width: 100%;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+}
+footer #footernav .server{
+    width: 89%;
+    /* background-color: #ffb900; */
+    display: flex;
+    justify-content: space-between;
+}
+footer #footernav .server .footer{
+    width: 250px;
+    /* background-color: #262626; */
+}
+footer #footernav .server .footer ul li{
+    list-style: none;
+    color: black;
+    font-size: 15px;
+    opacity: 0.5;
+    line-height: 30px;
+}
+footer #footernav .server .footer ul a{
+    text-decoration: none;
+}
+footer #footernav .server .footer ul a:hover{
+    text-decoration: underline;
+}
+footer #footernav .server .footer ul span{
+    font-weight: 800;
+    text-decoration: none;
+}
+footer #footerbase{
+    width: 100%;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+}
+footer #footerbase .base{
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+footer #footerbase .base .lang{
+    width: 300px;
+    opacity: 0.5;
+    font-size: 15px;
+}
+footer #footerbase .base .lang a{
+    text-decoration: none;
+    color: black;
+}
+footer #footerbase .base .lang a:hover{
+    text-decoration: underline;
+}
+footer #footerbase .base .footerlink{
+    width: 500px;
+    opacity: 0.5;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+footer #footerbase .base .footerlink a{
+    color: black;
+    text-decoration: none;
+}
+footer #footerbase .base .footerlink a:hover{
+    text-decoration: underline;
+}
